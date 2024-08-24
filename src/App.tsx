@@ -1,11 +1,12 @@
+import { useRef } from 'react';
 import './App.css';
-import ReactLogo from './points';
+import { CsssLogo, GitHubLogo, MuiLogo, NodejsLogo, ReactLogo,SlopLogo,ViteLogo} from './points';
 
 function App() {
+  const nameRef=useRef<HTMLElement>()
   return (
     <div className="container">
-      <div className="app">
-        <ReactLogo/>
+      <div className="app" >
         <h2 className="anim2">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -37,25 +38,29 @@ function App() {
             />
           </svg>
         </h2>
-        <h2 className="text-gradient">Awsome Text </h2>
+        <h2 className="text-gradient" ref={nameRef!}>Muath Dev </h2>
+        <p>
+        Welcome to my portfolio! I specialize in creating dynamic and responsive web interfaces that bring ideas to life. With a passion for crafting clean and efficient code, I strive to deliver seamless user experiences across all devices. Explore my work to see how I can help turn your vision into reality. Let's build something amazing together!
+        </p>
         <div className="grid-view ">
-          <div className="logo">
-            <h2 className="text-gradsient ">Animated </h2>
-            <p className="read-the-docs">
-              Art in motion, endlessly captivating.
-            </p>
+          <div className="logo box">
+          <img width="60" src="https://img.icons8.com/3d-fluency/94/guest-male--v2.png" alt="guest-male--v2"/>
+
+            <h2 className="text-gradsient ">About </h2>
+
           </div>{' '}
-          <div className="logo">
-            <h2 className="text-gradsient">Creative </h2>
-            <p className="read-the-docs">Crafting the unseen into reality.</p>
+          <div className="logo box">
+          <img width="60" src="https://img.icons8.com/3d-fluency/50/hard-working.png" alt="hard-working"/>
+            <h2 className="text-gradsient">Works </h2>
           </div>{' '}
-          <div className="logo">
-            <h2 className="text-gradsient">Simple </h2>
-            <p className="read-the-docs">No frills, just essentials.</p>
+          <div className="logo box">
+            <img width="60" src="https://img.icons8.com/3d-fluency/50/mail.png" alt="mail"/>
+            <h2 className="text-gradsient">Contact </h2>
+            
           </div>{' '}
-          <div className="logo">
-            <h2 className="text-gradsient">Esay </h2>
-            <p className="read-the-docs">Naturally radiant and appealing.</p>
+          <div className="logo box ">
+          <img width="60"  src="https://img.icons8.com/3d-fluency/50/popular-topic.png" alt="popular-topic"/>
+            <h2 className="text-gradsient">Feedback</h2>
           </div>
         </div>{' '}
         <h2 className="anim1">
@@ -89,7 +94,15 @@ function App() {
             />
           </svg>
         </h2>
+        <footer style={{position:'fixed',bottom:'1%',right:0,left:0}}>
+      <ViteLogo/>
+      <ReactLogo/>
+<MuiLogo/>
+<CsssLogo/>
+<SlopLogo/>
+</footer>
       </div>
+
     </div>
   );
 }

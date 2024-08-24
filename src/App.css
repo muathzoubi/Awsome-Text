@@ -6,7 +6,15 @@
   cursor: url('data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2225%22%20height%3D%2225%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%3E%0A%0A%3Cg%20id%3D%22SVGRepo_bgCarrier%22%20stroke-width%3D%220%22%2F%3E%0A%0A%3Cg%20id%3D%22SVGRepo_tracerCarrier%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%2F%3E%0A%0A%3Cg%20id%3D%22SVGRepo_iconCarrier%22%3E%20%3Cpath%20d%3D%22M20.5056%2010.7754C21.1225%2010.5355%2021.431%2010.4155%2021.5176%2010.2459C21.5926%2010.099%2021.5903%209.92446%2021.5115%209.77954C21.4205%209.61226%2021.109%209.50044%2020.486%209.2768L4.59629%203.5728C4.0866%203.38983%203.83175%203.29835%203.66514%203.35605C3.52029%203.40621%203.40645%203.52004%203.35629%203.6649C3.29859%203.8315%203.39008%204.08635%203.57304%204.59605L9.277%2020.4858C9.50064%2021.1088%209.61246%2021.4203%209.77973%2021.5113C9.92465%2021.5901%2010.0991%2021.5924%2010.2461%2021.5174C10.4157%2021.4308%2010.5356%2021.1223%2010.7756%2020.5054L13.3724%2013.8278C13.4194%2013.707%2013.4429%2013.6466%2013.4792%2013.5957C13.5114%2013.5506%2013.5508%2013.5112%2013.5959%2013.479C13.6468%2013.4427%2013.7072%2013.4192%2013.828%2013.3722L20.5056%2010.7754Z%22%20stroke%3D%22%23fcfe71%22%20stroke-width%3D%222%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%2F%3E%20%3C%2Fg%3E%0A%0A%3C%2Fsvg%3E'),
     crosshair;
 }
-
+h2{ animation-duration: 5s;
+  font-size: 20px;
+  line-height: 1;
+  font-weight: black;
+background: linear-gradient(0deg, rgba(255,255,255,0) 0%, rgba(255,253,184,1) 28%, rgba(255,248,0,0.8038865204284839) 43%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: contain;
+  text-shadow: #000 1px 1px 50px;}
 .logo {
   height: 5em;
   padding: 1.5em;
@@ -14,12 +22,14 @@
   transition: filter 300ms;
 }
 .logo:hover {
-  filter: drop-shadow(0 1em 2em #e900b3);
+  filter: drop-shadow(0 0em 1em #99ff003a);
 }
 .logo.react:hover {
   filter: drop-shadow(0 0 2em #99ff00aa);
 }
-
+.logo img{
+  width: 24px !important;
+}
 @keyframes logo-spin {
   from {
     transform: rotate(0deg);
@@ -30,7 +40,7 @@
 }
 
 @media (prefers-reduced-motion: no-preference) {
-   .logo img {
+   .logo .react {
     animation: logo-spin infinite 0.7s linear;
   }
 }
@@ -45,8 +55,10 @@
 }
 body {
   text-align: center;
+
 }
 .container {
+
   position: fixed;
   top: 0;
   right: 0;
@@ -62,55 +74,96 @@ body {
 .grid-view {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
+
 }
 .box {
   background: rgba(55, 55, 55, 0.5);
   padding: 40px;
   border-radius: 20px;
-  box-shadow: #000 1px 1px 13px;
-  max-width: 30vw;
+border:1px transparent solid;
+
+
+  width: 100px;
   margin: auto;
+  margin-bottom: 5px;
+}
+.box:hover{
+border:1px  #99ff00aa solid
 }
 .anim {
   position: fixed;
   animation: examplew infinite 7s linear;
   right: 50%;
   bottom: 0;
+  z-index: -1;
+  filter: blur(1px);
+
 }
 
 .anim1 {
   position: fixed;
-  animation: examplew infinite 9s linear;
-  filter: drop-shadow(0 0 2em #e1e900aa);
+
+  animation: examplew infinite 22s linear;
+  filter: drop-shadow(0 0 2em #e1e900aa) blur(1px);
+
   bottom: 0;
+z-index: -1;
+
 }
 .anim2 {
   position: fixed;
-  animation: examplew infinite 13s cubic-bezier(0.2, 0.84, 0.44, .10);
+  animation: examplew infinite 23s cubic-bezier(0.2, 0.84, 0.44, .10);
   bottom: 0;
-  filter: drop-shadow(0 0 2em #e1e900aa);
+  filter: drop-shadow(0 0 2em #e1e900aa) blur(1px);
+left: 70%;
 
-  left: 70%;
+z-index: -1;
 }
 .anim3 {
   position: fixed;
-  animation: examplew infinite  linear;
+  animation: examplew infinite 17s linear;
+
   bottom: 0;
-  filter: drop-shadow(0 0 2em #e1e900aa);
-  left: 50%;
+  filter: drop-shadow(0 0 2em #e1e900aa) blur(1px);
+z-index: -1;
+
 }
 .anim4 {
-  filter: drop-shadow(0 0 2em #e1e900aa);
-  position: fixed;
-  animation: left-to-right  infinite 1s linear;
-  bottom:  30%;
-  left:100%;
+  filter: drop-shadow(0 0 2em #e1e900aa) blur(1px);
+  filter: blur(1px);
+
+  position: fixed !important;
+z-index: -1;
+filter: drop-shadow(0 0 2em #e1e900aa) blur(1px);
+
+  animation: examplew  infinite 14s linear;
+  bottom:  0%;
+}
+.anim6{
+  filter: drop-shadow(0 0 2em #e1e900aa) blur(1px);
+  position: fixed !important;
+  animation: examplew  infinite 32s linear;
+  bottom:  0%;
+z-index: -1;
+
+}
+
+.anim7{
+  position: fixed !important;
+  animation: examplew  infinite 11s linear;
+z-index: -1;
+filter: drop-shadow(0 0 2em #e1e900aa) blur(1px);
+
+  bottom:0;
 }
 .anim5 {
   position: fixed;
-  animation: examplew infinite 1s linear;
-  right: 100%;
+  animation: examplew infinite 15s linear;
   bottom: 0;
+  z-index: -1;
+  filter: drop-shadow(0 0 2em #e1e900aa) blur(1px);
+
+
 }
 .app {
   margin: 200px;
@@ -138,11 +191,9 @@ body {
 @keyframes examplew {
   from {
     bottom: 0%;
-    opacity: 0.1;
   }
   to {
     bottom: 100%;
-    opacity: 0.6;
   }
 }
 @keyframes left-to-right {
@@ -152,7 +203,6 @@ body {
   }
   to {
     right:  100%;
-    opacity: 0.6;
   }
 }
 @media screen and (max-width: 900px) {
@@ -176,8 +226,9 @@ body {
     margin: 50px;
   }
   .grid-view {
-    font-size: 30px;
+    font-size: 15px;
     display: grid;
     grid-template-columns: 1fr;
   }
+
 }
