@@ -1,9 +1,11 @@
 import './App.css';
+import ReactLogo from './points';
 
 function App() {
   return (
     <div className="container">
       <div className="app">
+        <ReactLogo/>
         <h2 className="anim2">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -38,7 +40,7 @@ function App() {
         <h2 className="text-gradient">Awsome Text </h2>
         <div className="grid-view ">
           <div className="logo">
-            <h2 className="text-gradsient">Animated </h2>
+            <h2 className="text-gradsient ">Animated </h2>
             <p className="read-the-docs">
               Art in motion, endlessly captivating.
             </p>
