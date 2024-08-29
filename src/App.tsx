@@ -1,9 +1,7 @@
-import { useRef } from 'react';
 import './App.css';
-import { CsssLogo, GitHubLogo, MuiLogo, NodejsLogo, ReactLogo, SlopLogo, ViteLogo } from './points';
+import { CsssLogo,  MuiLogo,  ReactLogo, SlopLogo, ViteLogo } from './points';
 
 function App() {
-  const nameRef = useRef<HTMLElement>()
   return (
     <div className="container">
       <div className="app" >
@@ -38,7 +36,7 @@ function App() {
             />
           </svg>
         </h2>
-        <h2 className="text-gradient" ref={nameRef!}>Muath Dev </h2>
+        <h2 className="text-gradient" >Muath Dev </h2>
         <p >
           Welcome to my portfolio! I specialize in creating dynamic and responsive web interfaces that bring ideas to life. With a passion for crafting clean and efficient code, I strive to deliver seamless user experiences across all devices. Explore my work to see how I can help turn your vision into reality. Let's build something amazing together!
         </p>
